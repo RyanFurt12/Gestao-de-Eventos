@@ -1,0 +1,16 @@
+.home-container{
+    margin-top: 55px;
+}
+
+.sugestion-events .scroll-container{
+    height: calc(100vh - 420px);
+    overflow: scroll;
+}
+
+.sugestion-events .scroll-container::-webkit-scrollbar{
+    display: none;
+}
+
+.sugestion-events .scroll-container *:last-child{
+    margin-bottom: 20px;
+}

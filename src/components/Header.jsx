@@ -7,45 +7,52 @@ import profileIcon from '../assets/iconProfile.svg'
 
 const navPages = [
   {
-    name:'INÍCIO',
+    name: 'INÍCIO',
     icon: homeIcon,
     linkPath: '/'
   },
   {
-    name:'BUSCAR',
+    name: 'BUSCAR',
     icon: searchIcon,
     linkPath: '/search'
   },
   {
-    name:'EVENTOS',
+    name: 'EVENTOS',
     icon: eventIcon,
     linkPath: '/my-events'
   },
   {
-    name:'PERFIL',
+    name: 'PERFIL',
     icon: profileIcon,
     linkPath: '/profile'
   }
 ]
 
 function Header() {
-    return (
-      <>
-        <nav className='main-nav'>
+  return (
+    <>
+      <nav className='main-nav'>
         {
-          navPages.map( ni => (
-            <Link 
-              to={ni.linkPath} 
-              className={window.location.pathname == ni.linkPath? 'navbar-item navbar-active':'navbar-item'}
-            >
-              <img src={ni.icon} alt="" />
-              {ni.name}
-            </Link>
-          ))
+          navPages.map(ni => {
+            const isActive = ni.linkPath === '/'
+              ? window.location.pathname === '/'
+              : window.location.pathname.startsWith(ni.linkPath);
+
+            return (
+              <Link
+                key={ni.linkPath}
+                to={ni.linkPath}
+                className={'navbar-item' + (isActive ? ' navbar-active' : '')}
+              >
+                <img src={ni.icon} alt="" />
+                {ni.name}
+              </Link>
+            )
+          })
         }
       </nav>
-      </>
-    )
+    </>
+  )
 }
-  
+
 export default Header
