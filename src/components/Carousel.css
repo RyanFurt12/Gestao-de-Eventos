@@ -1,0 +1,60 @@
+.carrossel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carrossel-content {
+  display: flex;
+}
+
+.carrossel-item {
+  min-width: 100%;
+  transition: 0.5s ease-in-out;
+  opacity: .5;
+}
+
+.carrossel-item.active {
+  opacity: 1;
+}
+
+.carrossel-controls {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: auto;
+  height: 100%;
+  background-color: black;
+  transition: .3s;
+  opacity: 0;
+}
+
+.carrossel-controls:hover{
+  opacity: 0.5;
+}
+
+.carrossel-controls.prev{
+  left: 0;
+}
+.carrossel-controls.next{
+  right: 0;
+}
+
+.carrossel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.indicator.active {
+  background-color: #000;
+}

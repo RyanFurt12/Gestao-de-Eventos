@@ -1,0 +1,50 @@
+.my-adress-container .my-adress{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 5px 20px;
+    transition: .5s;
+    cursor: pointer;
+    background-color: white;
+}
+
+.my-adress-container.active-drop .my-adress{
+    box-shadow: 0 2px 5px #00000033;
+}
+
+.my-adress-container .my-adress p{
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.my-adress-container .my-adress .icon-drop{
+    width: 14px;
+    transition: 1s;
+}
+
+.my-adress-container.active-drop .icon-drop{
+    rotate: -180deg;
+}
+
+.my-adress-container .dropdown-menu{
+    position: fixed;
+    background-color: white;
+    z-index: 199;
+    top: 45px;
+    left: 0;
+    right: 0;
+    height: 250px;
+    border-radius: 25px;
+    transform: translateY(-100%);
+    transition: 1s;
+}
+
+.my-adress-container.active-drop .dropdown-menu{
+    transform: translateY(0);
+    box-shadow: 0 2px 5px #00000033;
+}

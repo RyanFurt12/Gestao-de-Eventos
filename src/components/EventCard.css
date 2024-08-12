@@ -1,0 +1,54 @@
+.event-card{
+    display: block;
+    height: 100px;
+    padding: 25px;
+    margin: 5px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px #0000007e;
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+
+    position: relative;
+}
+
+.event-card:hover{
+    scale: 1.005;
+}
+
+.event-card h3{
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.event-card p{
+    font-size: 14px;
+    margin: 0;
+}
+
+.card-simbol{
+    position: absolute;
+    background-color: black;
+    opacity: .4;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50%;
+}
+
+.card-simbol.type1{
+    clip-path: polygon(65% 52%, 84% 18%, 100% 46%, 100% 100%, 0 100%, 5% 52%, 30% 66%);
+}
+
+.card-simbol.type2{
+    clip-path: polygon(31% 40%, 35% 81%, 54% 38%, 100% 74%, 100% 100%, 0 100%, 0 33%, 13% 70%);
+}
+
+.card-simbol.type3{
+    clip-path: polygon(59% 72%, 74% 44%, 100% 54%, 100% 100%, 25% 100%, 42% 63%);
+}
+
+.card-simbol.type4{
+    clip-path: polygon(78% 49%, 53% 53%, 26% 45%, 8% 60%, 0% 99%, 100% 100%, 91% 65%);
+}

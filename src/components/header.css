@@ -1,7 +1,8 @@
-nav.main-nav{
+nav.main-nav {
     background: #FAFAFA;
     border-top: 2px solid #C4C4C4;
     position: fixed;
+    z-index: 500;
     bottom: 0;
     left: 0;
     right: 0;
@@ -10,7 +11,7 @@ nav.main-nav{
     overflow: hidden;
 }
 
-.navbar-item{
+.navbar-item {
     position: relative;
     display: flex;
     align-items: center;
@@ -24,12 +25,12 @@ nav.main-nav{
     height: 50px;
 }
 
-.navbar-item img{
+.navbar-item img {
     height: 30px;
     margin-bottom: 5px;
 }
 
-.navbar-item:hover{
+.navbar-item:hover {
     color: black;
     box-shadow: 0 0 15px #00000033;
 }
@@ -42,7 +43,7 @@ nav.main-nav{
     color: black;
 }
 
-.navbar-item.navbar-active::after{
+.navbar-item.navbar-active::after {
     content: '';
     position: absolute;
     top: 0;
