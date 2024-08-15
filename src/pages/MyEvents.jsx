@@ -1,7 +1,11 @@
 function MyEvents() {
     return (
       <>
-        <h1>MyEvents</h1>
+        <div style={{height:"50px"}}></div>
+        <button>Criar Evento</button>
+        <button>Meus Eventos</button>
+        <button>Eventos Favoritos</button>
+        <button>Eventos Em Interesse</button>
       </>
     )
 }

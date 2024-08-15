@@ -2,25 +2,6 @@
 
 :root{
   font-family: "League Spartan", sans-serif;
-}
-
-input{
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-  
-}
-button {
-  background-color: #007BFF;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
-}
-button:hover {
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  --main-color: #A32822;
+  --bg-color: white;
 }

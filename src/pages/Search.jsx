@@ -1,7 +1,14 @@
+import MyAdressDrop from "../components/MyAdressDrop"
+
 function Search() {
     return (
       <>
-        <h1>Search</h1>
+      	<MyAdressDrop />
+        <div style={{height:"50px"}}></div>
+
+        <label>
+          <input type="text" placeholder="Busque por eventos"/>
+        </label>
       </>
     )
 }
