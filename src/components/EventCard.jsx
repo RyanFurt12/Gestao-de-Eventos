@@ -10,6 +10,7 @@ function EventCard({ name, color, date }) {
 	return (
 		<>
 			<Link
+				to={"/event/1"}
 				className="event-card"
 				style={{ backgroundColor: color }}
 			>
