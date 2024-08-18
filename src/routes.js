@@ -7,6 +7,7 @@ import Profile from './pages/Profile';
 import NotFound from './pages/NotFound';
 import MyEventsCreate from './pages/MyEvents-Create';
 import MyEventsCreateSucess from "./pages/MyEventsCreateSuccess";
+import EventPage from './pages/EventPage';
 
 const routes = [
   {
@@ -44,6 +45,10 @@ const routes = [
   {
     path: '/profile',
     component: Profile
+  },
+  {
+    path: '/event/:id',
+    component: EventPage
   },
   {
     path: '*',
