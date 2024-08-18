@@ -5,6 +5,8 @@ import Search from './pages/Search';
 import MyEvents from './pages/MyEvents';
 import Profile from './pages/Profile';
 import NotFound from './pages/NotFound';
+import MyEventsCreate from './pages/MyEvents-Create';
+import MyEventsCreateSucess from "./pages/MyEventsCreateSuccess";
 
 const routes = [
   {
@@ -30,6 +32,14 @@ const routes = [
   {
     path: '/my-events',
     component: MyEvents
+  },
+  {
+    path: '/my-events/Create',
+    component: MyEventsCreate
+  },
+  {
+    path: '/my-events/Create/Success',
+    component: MyEventsCreateSucess
   },
   {
     path: '/profile',

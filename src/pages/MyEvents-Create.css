@@ -1,0 +1,20 @@
+.titleCreate {
+    color: var(--main-color);
+}
+
+.description [type="description"]{
+   height: 200px;
+   text-wrap: wrap;
+}
+
+.DateTime {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.text {
+    margin: 5px;
+    text-align: center;
+    font-size: 16px;
+}
