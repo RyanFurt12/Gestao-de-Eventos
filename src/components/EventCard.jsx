@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import './EventCard.css'
 import { useEffect, useState } from 'react';
 
-function EventCard({ name, color, date }) {
+function EventCard({ id, name, color, date }) {
 	const [type, setType] = useState(1);
 
 	useEffect(() => { setType(Math.ceil(Math.random() * 4)) }, []);
@@ -10,7 +10,7 @@ function EventCard({ name, color, date }) {
 	return (
 		<>
 			<Link
-				to={"/event/1"}
+				to={"/event/" + id}
 				className="event-card"
 				style={{ backgroundColor: color }}
 			>

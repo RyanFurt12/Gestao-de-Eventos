@@ -37,6 +37,7 @@
 }
 
 .event-photos{
+  margin-top: 15px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
@@ -48,4 +49,14 @@
   object-fit: cover;
   margin: auto;
   border-radius: 10px;
+}
+
+.event-info{
+  height: calc(100vh - 420px);
+  padding-bottom: 50px;
+  overflow: scroll;
+}
+
+.event-info::-webkit-scrollbar{
+  display: none;
 }
