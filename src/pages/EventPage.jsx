@@ -3,10 +3,12 @@ import { useEffect, useState } from "react";
 import { doc, getDoc } from 'firebase/firestore';
 import { db } from '../services/firebase'
 import './EventPage.css'
+import { isColorLight } from "../services/utils";
 
 function EventPage() {
   const { id } = useParams();
   const [eventData, setEventData] = useState(null);
+  const [textColor, setTextColor] = useState('white');
 
   const navigate = useNavigate()
 
@@ -16,6 +18,7 @@ function EventPage() {
         const eventDoc = await getDoc(doc(db, 'events', id));
         if (eventDoc.exists()) {
           setEventData(eventDoc.data());
+          setTextColor(isColorLight(eventDoc.data().cor)? 'black' : 'white')
         } else {
           navigate('/404')
         }
@@ -23,13 +26,13 @@ function EventPage() {
         navigate('/404')
       }
     };
-
+    
     fetchEventData();
   }, [id]);
 
   return (
     <>
-      <div style={{backgroundColor:eventData?.cor}} className="event-header">
+      <div style={{color:textColor, backgroundColor:eventData?.cor}} className="event-header">
         <h2>{eventData?.nome || "Nome de Exemplo"}</h2>
         <p>{new Date(eventData?.dataInicio.seconds * 1000).toLocaleString()}</p>
       </div>

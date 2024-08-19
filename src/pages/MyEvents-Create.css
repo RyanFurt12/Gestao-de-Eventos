@@ -7,7 +7,7 @@
    text-wrap: wrap;
 }
 
-.DateTime {
+.grid-2 {
     margin: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -17,4 +17,8 @@
     margin: 5px;
     text-align: center;
     font-size: 16px;
+}
+
+input[type='color']{
+    padding: 2px;
 }
