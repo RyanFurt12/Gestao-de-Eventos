@@ -23,6 +23,7 @@ async function fetchNextEvents() {
         return eventsList.map(event => (
             <EventCard
                 key={event.id}
+                id={event.id}
                 name={event.nome}
                 color={event.cor}
                 date={new Date(event.dataInicio.seconds * 1000).toLocaleString()}
